@@ -1,0 +1,41 @@
+random facts about the dataset
+
+approximately power law distribution of funds
+~15% of loans come from repeat customers (open to interpretation, likely slightly higher)
+~16% of loans in 2013 were from repeat customers (open to interpretation, likely slightly higher)
+9% of loans when you filter by street number
+
+
+business name--DONE
+year--DONE
+got loan that year ? --DONE
+size of loan that year ? --DONE
+# previous loans --DONE
+loans charged off? (before year) --DONE
+previous loan characteristics (InitialInterestRate, TermInMonths, GrossApproval, SBAGuaranteedApproval, BankName) --DONE
+business characteristics (BorrCity, BorrState, NaicsCode) --DONE
+Interest rate, stock performance
+
+used this random forest walkthrough to build model
+https://www.biostars.org/p/86981/
+
+http://stackoverflow.com/questions/8704681/random-forest-with-classes-that-are-very-unbalanced
+other options: ksvm() from kernlab
+
+adaboost on unbalanced data works well
+http://stats.stackexchange.com/questions/28738/using-adaboost-on-multi-class-in-r-on-unbalanced-data
+
+http://stats.stackexchange.com/questions/12425/creating-a-certainty-score-from-the-votes-in-random-forests
+
+
+correlation of various variables with p(loan):
+(+) got loan recently
+(+) really low interest rate (even holding constant year of loan)
+(+) didn't default (not big positive signal)
+
+Not very correlated with p(loan):
+size of loan
+ratio of guaranteed portion to total portion
+
+
+with a forest, you can get up to 6% accuracy (cutting off first 10k top-voted businesses, for some reason)

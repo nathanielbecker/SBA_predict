@@ -1,3 +1,10 @@
+*.csv
+*.txt
+*.xls
+*.xlsx
+*.db
+
+####boilerplate R gitignore
 # History files
 .Rhistory
 
